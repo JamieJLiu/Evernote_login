@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function checkForm()
+        {
+           
+            var username = document.getElementById("number");
+            var m = document.getElementById("password") ;
+            if(username.value == "384765291@qq.com"){
+                if(m.value == "456"){
+                    alert("ok");
+                }else{
+                    alert("密码错误");
+                }
+            }else{
+                alert("用户名错误");
+            }
+        }
+        function checkEmail(){
+            var r1 = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+            var r2 = /^1[34578]\d{9}$/;
+            var s = document.getElementById("number").value;
+            if(!(r1.test(s)||r2.test(s))){
+                alert("请输入正确的用户名")
+            }
+
+        }
+    </script>
+</head>
+<style>
+body{
+    background-color: rgb(240, 236, 236);
+}
+h1{
+    font-weight: 50;
+    font-size: 40;
+    font-family: serif;
+}
+ol{
+    list-style: none; 
+}
+.dicbd{
+   margin:auto;
+    border:1px solid rgb(167, 165, 165);
+}
+.box2{
+    height:38px;
+    width:300px;
+    color:darkgray;
+    border-radius: 8px;
+    border-color:rgb(197, 195, 195);
+    border-width: 0.5px;
+}
+.log{
+    background-color: rgb(79, 196, 114);
+    color:white;
+    height:48px;
+    width:300px;
+    font-size:16px;
+
+    border-radius: 8px;
+}
+.wp {
+    line-height: 500px;
+    text-align: center;
+    font-size: 0px;
+}
+.box {
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: initial;
+    text-align: left; /* 修正文字 */
+}
+
+</style>
+<body>
+
+<div class="wp">
+    <div class="box">
+    <div style="text-align:center">
+    <img  src="1544618162(1).png">
+    <h1 >登录</h1>
+    </div>
+    <br/>
+    <div class="dicbd">
+    <form>
+    <div>
+        <ol style="position: relative;left: -23px;"> 
+       <li>
+           <input style="margin-top: 15px;" type="text" id="number" class="box2" placeholder="手机或邮箱">
+        </li> 
+        <br/>
+        <li>
+            <input type-"password" id="password" onclick="checkEmail()" class="box2" placeholder="密码">
+        </li>
+        <br/>
+        <br/>
+        <li>
+            <label><input type="checkbox" name="rememberMe">30 天内记住我</label>
+        </li>
+        <div style="width:280px;float: middle;">
+            <button type="submit" class="log" onclick="checkForm()">登录</button>
+        </div>
+       </ol> 
+       <br/>
+       <br/>
+        <p style="text-align:center"><a href="https://app.yinxiang.com/ForgotPassword.action?targetUrl=%2FHome.action" 
+          >忘记密码？</a></p>
+    </div>
+    </form>        
+    </div>   
+    </div> 
+</div> 	
+</body>
+</html>
